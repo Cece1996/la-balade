@@ -79,19 +79,25 @@ Affiche l’objet en console.
  
 let nom = prompt('Quel est votre nom?');
 let prenom = prompt('Quel est votre prénom?');
-let sex = prompt('Quel est votre sexe? Homme ou Femme');
+let sexe = prompt('Quel est votre sexe? Homme ou Femme');
+class Genre{
+    constructor(newName, newSurname, newSex){
+        this.name = newName;
+        this.surname = newSurname;
+        this.sex = newSex;
+    }
+}
 
-if (sex == 'Homme') {
-    let M = [nom, prenom, sex];
-    console.log(Object.keys(M));
-} if (sex == 'Femme') {
-    let Mme = [nom, prenom, sex];
-    console.log(Object.keys(Mme));
+if (sexe == 'Homme') {
+    let M = new Genre (nom, prenom, sexe);
+    console.log(M);
+} if (sexe == 'Femme') {
+    let Mme = (nom, prenom, sex);
+    console.log(Mme);
 } else {
-    
+    alert('Veillez entrer les bonnes informations')
 } 
 
-// affichera ['0', '1', '2']
 
 /**
  * Episode 6
@@ -99,6 +105,24 @@ if (sex == 'Homme') {
 */
 
 let day = prompt('Saisissez le numéro d\'un jour de la semaine')
+if (day == '1'){
+    alert('Lundi')
+} else if (day == '2') {
+    alert('Mardi')
+ } else if (day == '3') {
+    alert('Mercredi')
+ } else if (day == '4') {
+    alert('Jeudi')
+ } else if (day == '5') {
+    alert('Vendredi')
+ } else if (day == '6') {
+    alert('Samedi')
+ } else if (day == '7') {
+    alert('Dimanche')
+ } else {
+    alert('Je n\'ai rien a vous dire')
+ }
+
 
 /**
  *Episode 7
@@ -117,4 +141,5 @@ alert(`Votre moyenne en Mathematique est ${moyenne}`)
  * Ecrire un programme qui demande de saisir les noms et les moyennes des élèves d’une classe et affiche le premier de la classe (son nom ainsi que sa moyenne).
 */
 
-let nom_eleve = prompt('Veillez saisir le nom de l\'élève')
+let nomEleve = prompt('Veillez saisir le nom de l\'élève');
+let moyenneEleve = prompt('Entrez la moyenne de l\'élève');
